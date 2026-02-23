@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hubli Branches</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  /* Body & Video Background */
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+    background-color: #111;
+    color: #fff;
+  }
+
+  .video-background {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  .video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.3);
+  }
+
+  /* Animated Neon Heading */
+  h1 {
+    text-align: center;
+    margin: 60px 0;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #b0f10c;
+    display: inline-block;
+    padding: 15px 50px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 15px;
+    text-shadow: 0 0 20px #b0f10c, 0 0 40px #b0f10c;
+    position: relative;
+    overflow: hidden;
+  }
+
+  h1::before, h1::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -75%;
+    width: 50%; height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.2), rgba(255,255,255,0.6), rgba(255,255,255,0.2));
+    transform: skewX(-25deg);
+  }
+
+  h1::before { animation: shine 2s infinite; }
+  h1::after { animation: shine 3s infinite; animation-delay: 1s; }
+
+  @keyframes shine {
+    0% { left: -75%; }
+    50% { left: 125%; }
+    100% { left: 125%; }
+  }
+
+  /* Cards Layout */
+  .branch-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,255,0,0.1);
+    transition: transform 0.5s, box-shadow 0.5s;
+    background: rgba(20,20,20,0.9);
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .branch-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 12px 40px rgba(0,255,0,0.5);
+  }
+
+  .branch-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    border-bottom: 2px solid #b0f10c;
+    position: relative;
+  }
+
+  .branch-card img::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -75%;
+    width: 50%; height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.2), rgba(255,255,255,0.6), rgba(255,255,255,0.2));
+    transform: skewX(-25deg);
+    transition: all 0.5s;
+    animation: imgShine 3s infinite;
+  }
+
+  .branch-card img:hover {
+    filter: brightness(1.3);
+  }
+
+  @keyframes imgShine {
+    0% { left: -75%; }
+    50% { left: 125%; }
+    100% { left: 125%; }
+  }
+
+  .card-body h5 {
+    font-weight: 700;
+    color: #b0f10c;
+    margin-top: 10px;
+  }
+
+  .card-body p {
+    font-size: 0.9rem;
+    color: #ddd;
+  }
+
+  .btn.custom-btn {
+    border: 1px solid #b0f10c;
+    color: #b0f10c;
+    transition: 0.3s;
+    margin: 5px 2px;
+  }
+
+  .btn.custom-btn:hover {
+    background-color: #b0f10c;
+    color: black;
+    box-shadow: 0 0 15px #b0f10c;
+  }
+
+  .row { justify-content: center; }
+</style>
+</head>
+<body>
+
+<!-- Video Background -->
+<div class="video-background">
+  <video autoplay muted loop>
+    <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+  </video>
+</div>
+
+<!-- Animated Heading -->
+<h1>Our Hubli Branches</h1>
+
+<!-- Branch Cards -->
+<div class="container">
+  <div class="row g-4">
+
+    <!-- Card Template -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="branch-card">
+        <img src="https://content3.jdmagicbox.com/v2/comp/hubli/w4/0836px836.x836.241129203202.m3w4/catalogue/bendre-cha-hubli-coffee-shops-gaed1dtvs6.jpg" alt="Rameshbhavan Hubli">
+        <div class="card-body">
+          <h5>Rameshbhavan Hubli</h5>
+          <p>📍 Rameshbhavan, Keshwapur, Hubli<br>🕒 8 AM – 8 PM<br>📞 +91 80XXXXXXX</p>
+          <a href="https://www.google.com/maps/search/Rameshbhavan+Hubli" target="_blank" class="btn custom-btn btn-sm">View Location</a>
+          <a href="tel:+9180XXXXXXX" class="btn custom-btn btn-sm">Call Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add more cards for other branches -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="branch-card">
+        <img src="https://content3.jdmagicbox.com/v2/comp/hubli/w4/0836px836.x836.241129203202.m3w4/catalogue/bendre-cha-hubli-coffee-shops-gaed1dtvs6.jpg" alt="Siddaruda Math Hubli">
+        <div class="card-body">
+          <h5>Siddaruda Math Hubli</h5>
+          <p>📍 Near City Market, Hubli<br>🕒 8 AM – 8 PM<br>📞 +91 80XXXXXXX</p>
+          <a href="https://www.google.com/maps/search/Siddaruda+Math+Hubli" target="_blank" class="btn custom-btn btn-sm">View Location</a>
+          <a href="tel:+9180XXXXXXX" class="btn custom-btn btn-sm">Call Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add more branches here -->
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="branch-card">
+        <img src="https://content3.jdmagicbox.com/v2/comp/hubli/w4/0836px836.x836.241129203202.m3w4/catalogue/bendre-cha-hubli-coffee-shops-gaed1dtvs6.jpg" alt="Siddaruda Math Hubli">
+        <div class="card-body">
+          <h5>dajiban pate hubi</h5>
+          <p>📍 Near City Market, Hubli<br>🕒 8 AM – 8 PM<br>📞 +91 80XXXXXXX</p>
+          <a href="https://maps.app.goo.gl/TcL1eDnFbjS6tjAf6" target="_blank" class="btn custom-btn btn-sm">View Location</a>
+          <a href="tel:+9180XXXXXXX" class="btn custom-btn btn-sm">Call Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="branch-card">
+        <img src="https://content3.jdmagicbox.com/v2/comp/hubli/w4/0836px836.x836.241129203202.m3w4/catalogue/bendre-cha-hubli-coffee-shops-gaed1dtvs6.jpg" alt="Siddaruda Math Hubli">
+        <div class="card-body">
+          <h5>HDMC near neharu stadiem</h5>
+          <p>📍 Near City Market, Hubli<br>🕒 8 AM – 8 PM<br>📞 +91 80XXXXXXX</p>
+          <a href="https://maps.app.goo.gl/LRJCcCC4Z4fdKJuV6" target="_blank" class="btn custom-btn btn-sm">View Location</a>
+          <a href="tel:+9180XXXXXXX" class="btn custom-btn btn-sm">Call Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="branch-card">
+        <img src="https://content3.jdmagicbox.com/v2/comp/hubli/w4/0836px836.x836.241129203202.m3w4/catalogue/bendre-cha-hubli-coffee-shops-gaed1dtvs6.jpg" alt="Siddaruda Math Hubli">
+        <div class="card-body">
+          <h5>CBT bus stop</h5>
+          <p>📍 Near City Market, Hubli<br>🕒 8 AM – 8 PM<br>📞 +91 80XXXXXXX</p>
+          <a href="https://maps.app.goo.gl/HqTA9NvWmZTyBQWd9" target="_blank" class="btn custom-btn btn-sm">View Location</a>
+          <a href="tel:+9180XXXXXXX" class="btn custom-btn btn-sm">Call Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="branch-card">
+        <img src="https://content3.jdmagicbox.com/v2/comp/hubli/w4/0836px836.x836.241129203202.m3w4/catalogue/bendre-cha-hubli-coffee-shops-gaed1dtvs6.jpg" alt="Siddaruda Math Hubli">
+        <div class="card-body">
+          <h5>CBT bus stop</h5>
+          <p>📍 Near City Market, Hubli<br>🕒 8 AM – 8 PM<br>📞 +91 80XXXXXXX</p>
+          <a href="https://maps.app.goo.gl/HqTA9NvWmZTyBQWd9" target="_blank" class="btn custom-btn btn-sm">View Location</a>
+          <a href="tel:+9180XXXXXXX" class="btn custom-btn btn-sm">Call Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="branch-card">
+        <img src="https://content3.jdmagicbox.com/v2/comp/hubli/w4/0836px836.x836.241129203202.m3w4/catalogue/bendre-cha-hubli-coffee-shops-gaed1dtvs6.jpg" alt="Siddaruda Math Hubli">
+        <div class="card-body">
+          <h5>CBT bus stop</h5>
+          <p>📍 Near City Market, Hubli<br>🕒 8 AM – 8 PM<br>📞 +91 80XXXXXXX</p>
+          <a href="https://maps.app.goo.gl/HqTA9NvWmZTyBQWd9" target="_blank" class="btn custom-btn btn-sm">View Location</a>
+          <a href="tel:+9180XXXXXXX" class="btn custom-btn btn-sm">Call Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="branch-card">
+        <img src="https://content3.jdmagicbox.com/v2/comp/hubli/w4/0836px836.x836.241129203202.m3w4/catalogue/bendre-cha-hubli-coffee-shops-gaed1dtvs6.jpg" alt="Siddaruda Math Hubli">
+        <div class="card-body">
+          <h5>CBT bus stop</h5>
+          <p>📍 Near City Market, Hubli<br>🕒 8 AM – 8 PM<br>📞 +91 80XXXXXXX</p>
+          <a href="https://maps.app.goo.gl/HqTA9NvWmZTyBQWd9" target="_blank" class="btn custom-btn btn-sm">View Location</a>
+          <a href="tel:+9180XXXXXXX" class="btn custom-btn btn-sm">Call Now</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
